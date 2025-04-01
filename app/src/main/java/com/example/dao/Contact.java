@@ -7,10 +7,12 @@ import androidx.room.PrimaryKey;
 public class Contact {
     @PrimaryKey(autoGenerate = true)
     private int id;
-    private String lName;
-    private String Adress;
-    private String Phone;
-    private String fName;
+    private String lastName;
+    private String adress;
+    private String phone;
+    private String firstName;
+
+    // Getters and Setters
 
     public int getId() {
         return id;
@@ -20,35 +22,46 @@ public class Contact {
         this.id = id;
     }
 
-    public String getfName() {
-        return fName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getAdress() {
-        return Adress;
+        return adress;
     }
 
     public void setAdress(String adress) {
-        Adress = adress;
+        this.adress = adress;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", lastName='" + lastName + '\'' +
+                ", adress='" + adress + '\'' +
+                ", phone='" + phone + '\'' +
+                ", firstName='" + firstName + '\'' +
+                '}';
     }
 }
